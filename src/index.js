@@ -28,9 +28,7 @@ function startCountdown() {
     if (remainingTime === 5) {
       showToast("Start the engines! ");
     }
-    // ::: END OF BONUS
 
-    // IMPORTANT: Remember to decrement the remaining time on each interval
     remainingTime--;
   }, 1000);
 }
