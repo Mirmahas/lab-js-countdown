@@ -19,16 +19,6 @@ function startCountdown() {
       clearInterval(timer);
       showToast(" Lift off! ");
     }
-
-    // BONUS: ITERATION 5: More Toasts
-    if (remainingTime === 10) {
-      showToast("Final countdown!");
-    }
-
-    if (remainingTime === 5) {
-      showToast("Start the engines! ");
-    }
-
     remainingTime--;
   }, 1000);
 }
@@ -44,11 +34,4 @@ function showToast(message) {
   const timeout = setTimeout(() => {
     toastElement.classList.remove("show");
   }, 3000);
-
-  // BONUS: ITERATION 4 | Close Toast Button
-  const closeToast = document.querySelector("#close-toast");
-  closeToast.addEventListener("click", function () {
-    toastElement.classList.remove("show");
-    clearTimeout(timeout);
-  });
 }
